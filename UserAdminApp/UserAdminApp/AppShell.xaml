@@ -1,0 +1,8 @@
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:UserAdminApp.Views"
+       x:Class="UserAdminApp.AppShell">
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginPage}" />
+    <ShellContent Title="User Home" ContentTemplate="{DataTemplate views:UserHomePage}" />
+    <ShellContent Title="Admin Home" ContentTemplate="{DataTemplate views:AdminHomePage}" />
+</Shell>

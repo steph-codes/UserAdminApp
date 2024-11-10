@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UserAdminApp.Views.UserProfilePage"
+             Title="User Profile">
+
+    <StackLayout Padding="20">
+        <!-- User Profile Title -->
+        <Label Text="User Profile" FontSize="24" HorizontalOptions="Center" />
+
+        <!-- Display User Details -->
+        <Label Text="Username:" FontSize="18" />
+        <Label x:Name="UsernameLabel" FontSize="18" TextColor="Gray" />
+
+        <Label Text="Role:" FontSize="18" />
+        <Label x:Name="RoleLabel" FontSize="18" TextColor="Gray" />
+
+        <!-- Button to fetch the profile details -->
+        <Button Text="Fetch Profile" Clicked="OnFetchProfileClicked" />
+
+        <!-- Logout Button to trigger logout -->
+        <Button Text="Logout" Clicked="OnLogoutClicked" BackgroundColor="Red" TextColor="White" VerticalOptions="End" />
+
+    </StackLayout>
+</ContentPage>

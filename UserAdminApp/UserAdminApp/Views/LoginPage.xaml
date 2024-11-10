@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserAdminApp.Views.LoginPage"
+             Title="Login">
+    <StackLayout Padding="30">
+        <Label Text="Login" FontSize="24" HorizontalOptions="Center" />
+        <Entry x:Name="UsernameEntry" Placeholder="Username" />
+        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+        <Button Text="Login" Clicked="OnLoginButtonClicked" />
+        <Label x:Name="WelcomeLabel" FontSize="18" TextColor="Green" IsVisible="False" />
+
+        <!-- Register and Reset Password links -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+            <Label Text="Register" TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text=" | " TextColor="Gray"/>
+            <Label Text="Reset Password" TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnResetPasswordLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

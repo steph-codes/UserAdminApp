@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- Trust all certificates (used for self-signed certs, for testing purposes) -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">yourdomain.com</domain> <!-- Specify the domain you want to approve -->
+    </domain-config>
+
+</network-security-config>

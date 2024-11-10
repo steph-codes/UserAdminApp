@@ -1,0 +1,38 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserAdminApp.Views.AdminHomePage"
+             Title="Admin Home">
+    <StackLayout Padding="20">
+        <!-- Welcome Label -->
+        <Label x:Name="WelcomeLabel" FontSize="Large" HorizontalOptions="Center" />
+
+        <!-- Menu Buttons for CRUD operations -->
+        <Button Text="View Users" Clicked="OnViewUsersClicked"/>
+        <Button Text="Edit User" Clicked="OnEditUserClicked"/>
+        <Button Text="Delete User" Clicked="OnDeleteUserClicked"/>
+        <Button Text="Select User" Clicked="OnSelectUserClicked"/>
+
+        <!-- ListView to display all users, initially hidden -->
+        <ListView x:Name="UsersListView" IsVisible="False" ItemSelected="OnUserSelected">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Username" HorizontalOptions="StartAndExpand" />
+                    <Label Text="Role" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Username}" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding Role}" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Logout Button -->
+        <Button Text="Logout" Clicked="OnLogoutClicked" HorizontalOptions="Center" VerticalOptions="End" />
+    </StackLayout>
+</ContentPage>

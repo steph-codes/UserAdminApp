@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UserAdminApp.Views.UserHomePage"
+             Title="User Home Page">
+
+    <StackLayout Padding="10">
+        <!-- Welcome Message -->
+        <Label x:Name="WelcomeLabel" 
+               Text="Welcome, {username}!" 
+               FontSize="24" 
+               HorizontalOptions="Center" 
+               VerticalOptions="StartAndExpand" />
+
+        <!-- Menu -->
+        <Button Text="View Profile" 
+                Clicked="OnViewProfileClicked" 
+                HorizontalOptions="Center" />
+
+        <!-- Logout Button -->
+        <Button Text="Logout" 
+                Clicked="OnLogoutClicked" 
+                BackgroundColor="Red" 
+                TextColor="White" 
+                HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
